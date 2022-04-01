@@ -8,8 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx cypress run"
+    "cypress:run": "cypress run"
   },
   "author": "",
   "license": "ISC"
