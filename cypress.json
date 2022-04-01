@@ -1,0 +1,12 @@
+{
+    "defaultCommandTimeout": 8000,
+    "pageLoadTimeout": 40000,
+    "viewportWidth": 1280,
+    "viewportHeight": 720,
+    "env": {
+        "baseUrl": "https://www.amazon.com",
+        "waiter500": 500
+    },
+    "video":false,
+    "hideXHR": true
+}
