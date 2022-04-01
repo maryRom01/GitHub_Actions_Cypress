@@ -13,6 +13,17 @@ describe('Test should pass', () => {
     });
 });
 
+describe('Test should pass', () => {
+
+    before(() => {
+        cy.visit(baseUrl);
+    });
+
+    it('should test header title', () => {
+        cy.get('#nav-xshop-container').contains('Customer Service').should('exist');
+    });
+});
+
 describe('Test should fail', () => {
 
     before(() => {
@@ -23,3 +34,4 @@ describe('Test should fail', () => {
         cy.get('#nav-xshop-container').contains('Amazon Basics Fails').should('exist');
     });
 });
+
