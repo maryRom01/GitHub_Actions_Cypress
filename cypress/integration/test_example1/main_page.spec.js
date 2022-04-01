@@ -30,7 +30,7 @@ describe('Test should fail', () => {
         cy.visit(baseUrl);
     });
 
-    it('should test header title ', () => {
+    it.skip('should test header title ', () => {
         cy.get('#nav-xshop-container').contains('Amazon Basics Fails').should('exist');
     });
 });
