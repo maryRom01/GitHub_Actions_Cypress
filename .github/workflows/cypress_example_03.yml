@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cypress run - Main Page
+      - name: Cypress run - Login Page
         uses: cypress-io/github-action@v3
         with:
           start: "npm run cypress:login_page"
