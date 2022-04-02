@@ -8,7 +8,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "cypress:main_page": "cypress run --spec \"cypress/integration/test_example1/main_page.spec.js\"",
+    "cypress:login_page": "cypress run --spec \"cypress/integration/test_example1/login_page.spec.js\""
   },
   "author": "",
   "license": "ISC"
