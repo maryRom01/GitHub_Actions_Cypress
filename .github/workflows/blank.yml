@@ -1,0 +1,33 @@
+name: Cypress Run - Jobs Dependencies
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [master]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  job1: 
+    name: Main Page
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cypress run - Main Page
+        uses: cypress-io/github-action@v3
+        with:
+          start: "npm run cypress:main_page"
+  job2:
+    needs: [job1]
+    name: Login Page
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cypress run - Main Page
+        uses: cypress-io/github-action@v3
+        with:
+          start: "npm run cypress:login_page"
